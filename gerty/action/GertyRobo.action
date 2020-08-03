@@ -1,0 +1,8 @@
+#goal
+string ToDo
+---
+#result
+string AtGoal
+---
+#feedback
+string RoboState

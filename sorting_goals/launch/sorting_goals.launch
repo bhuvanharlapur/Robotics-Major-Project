@@ -1,0 +1,9 @@
+<launch>
+  <!-- My Package launch file -->
+  <!-- Launching package for sorting goals-->
+  <!-- <arg name="id" default=""/> -->
+  <node pkg="sorting_goals" type="sorting_goals_develop.py" name="sorting_goals" output="screen">
+    <!-- <param name="id" value="$(arg id)" type="int"/> -->
+  </node>
+
+</launch>

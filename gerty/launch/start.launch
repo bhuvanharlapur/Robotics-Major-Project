@@ -1,0 +1,21 @@
+<launch>
+
+  <!--Arguments-->
+  <!-- to set argument for robot number -->
+  <arg name="robot_id" default="1"/>
+
+
+  <!-- To sort all the goal points given -->
+  <node pkg="sorting_goals" type="sorting_goals.py" name="sorting_goals" output="screen" ns="robot$(arg robot_id)" />
+
+  <!-- Introducing Gerty robot to move robot to the goal points -->
+  <node pkg="gerty" type="gertyRob.py" name="GertyRun" output="screen" ns="robot$(arg robot_id)" />
+
+  <!-- Assigning parameter values to the move_base/DWAPlannerROS -->
+  <node
+  name="dynamic_reconfigure_local_costmap"
+  pkg="dynamic_reconfigure"
+  type="dynparam"
+  args="load robot$(arg robot_id)/move_base/DWAPlannerROS $(find gerty)/param/yaw_goal_param.yaml" />
+
+</launch>

@@ -1,0 +1,27 @@
+amcl:
+  min_particles: 1000
+  max_particles: 3000
+  kld_err: 0.02
+  update_min_d: 0.20
+  update_min_a: 0.20
+  resample_interval: 1
+  transform_tolerance: 0.5
+  recovery_alpha_slow: 0.00
+  recovery_alpha_fast: 0.00
+move_base:
+  global_costmap:
+    global_frame: map
+    robot_base_frame: base_footprint
+    update_frequency: 10.0
+    publish_frequency: 10.0
+    transform_tolerance: 0.5
+    static_map: true
+  local_costmap:
+    global_frame: odom
+    robot_base_frame: base_footprint
+    update_frequency: 10.0
+    publish_frequency: 10.0
+    transform_tolerance: 0.5
+
+move_base:
+  base_local_planner: carrot_planner/CarrotPlanner

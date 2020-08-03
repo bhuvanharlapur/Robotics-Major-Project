@@ -1,0 +1,28 @@
+image: 141.69.58.19:5000/iki/ros-kinetic-amr:latest
+
+before_script:
+  - echo "Before script section"
+  - cd /root/catkin_ws/
+  - catkin_make
+  - cd
+  - source /root/catkin_ws/devel/setup.bash
+
+stages:
+    - goal check
+    - sort check
+    - robot check
+
+test1:
+  stage: goal check
+  script:
+    - bash tests/01_goal_check.sh
+
+test2:
+  stage: sort check
+  script:
+    - bash tests/02_sorting_check.sh
+    
+test3:
+  stage: robot check
+  script:
+    - bash tests/03_RobotRun_check.sh

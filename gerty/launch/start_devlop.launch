@@ -1,0 +1,17 @@
+<launch>
+
+  <include file="$(find goal_publish)/launch/goal_launcher.launch"/>
+
+  <node pkg="sorting_goals" type="sorting_goals_develop.py" name="goals_logic" output="screen"/>
+
+  <node pkg="gerty" type="gertyRob_develop.py" name="GertyRun" output="screen"/>
+
+  <!-- <node pkg="gerty" type="retry_goals.py" name="retry_goals" output="screen"/> -->
+
+  <node
+  name="dynamic_reconfigure_local_costmap"
+  pkg="dynamic_reconfigure"
+  type="dynparam"
+  args="load /move_base/DWAPlannerROS $(find gerty)/param/yaw_goal_param.yaml" />
+
+</launch>

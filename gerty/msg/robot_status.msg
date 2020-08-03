@@ -1,0 +1,1 @@
+string robo_stat
