@@ -5,9 +5,8 @@
 
 Environment is containing of many objects such as cones, rectangular blocks, house structure and maze. Also there exists Multi-robots which are also looking for goals at the same time. Main objective of this project is to reach goal by using move_base package, sometimes move_base package fails to plan path for the goal due to small gap between obstacles. This should be captured and robot should be allocated to go towards other goal, in-case of failure in planning.  
 
-Repository contains of source code file named **gerty**  and a launch file named **start.launch**.
-Launch file will include *sorting_goals* package too.
-
+Repository contains of source code **gertyRob.py** in file **gerty/src**  and a launch file named **start.launch**. Launch file will include *sorting_goals* package too.
+Sorting Goals package contains goal sorting code **sorting_goals.py** in file **sorting_goals/src**
 
 ## Steps to launch program for competition
 
