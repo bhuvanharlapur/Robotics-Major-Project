@@ -1,8 +1,5 @@
 # Obstacle Avoidance using Move_Base package and reaching goals - Team *Star-Force*
 
-## Team Members  
-- Bhuvan Harlapur
-- Avinash Bhat
 
 ## Objective
 
